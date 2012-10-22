@@ -1,0 +1,18 @@
+check_login:
+	item:is_login
+	pin:
+		has_login:get_plans
+		not_login:login
+		
+get_plans:
+	item:get_top_plan
+	pin:
+		plans_found:showplans
+		
+showplans:
+	item:json
+		
+login:
+	item:echo
+	args:
+		msg:please login

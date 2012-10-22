@@ -1,0 +1,21 @@
+get_timer_data:
+	item:get_timer_data
+	pin:
+		succ:handle_timer
+		error:error
+		
+handle_timer:
+	item:tomato_timer
+	pin:
+		stoped:succ
+		started:succ
+		
+succ:
+	item:echo
+	args:
+		msg:succ
+		
+error:
+	item:echo
+	args:
+		msg:error

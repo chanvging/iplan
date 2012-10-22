@@ -1,0 +1,24 @@
+	
+<h3>尚未做过的：</h3>
+{assign var="dt" value=""}
+<dl>
+{foreach from=$todos.yes item=todo}
+{if $todo.name neq $dt}
+	{assign var="dt" value=$todo.name}
+	<dt><a href="index.php?cmd=showplan&id={$todo.planid}">{$dt}</a></dt>
+{/if}
+	<dd>- <a href="index.php?cmd=showplan&id={$todo.planid}#{$todo.stepid}">{$todo.action}</a></dd>
+{/foreach}
+</dl>
+
+<h3>已经做过的：</h3>
+{assign var="dt" value=""}
+<dl>
+{foreach from=$todos.no item=todo}
+{if $todo.name neq $dt}
+	{assign var="dt" value=$todo.name}
+	<dt><a href="index.php?cmd=showplan&id={$todo.planid}">{$dt}</a></dt>
+{/if}
+	<dd>- <a href="index.php?cmd=showplan&id={$todo.planid}#{$todo.stepid}">{$todo.action}</a></dd>
+{/foreach}
+</dl>

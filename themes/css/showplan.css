@@ -1,0 +1,46 @@
+textarea{font-size:inherit;}
+#addmore{opacity:0;}
+.steps li{position:relative;}
+.steps li a{color:#0192b8;}
+.steps li a:hover{text-decoration:underline;}
+.steps li > span{font-size:14px;line-height:25px;}
+.steps li.finish span{color:#bbb;}
+.steps li.finish span a{color:inherit;}
+img.doit{border:none;}
+.content{overflow:hidden;}
+.plan_content{margin:0 0 15px 10px;}
+.plan_content h4{margin:7px 0;font-size:12px;}
+.plan_content h4 span.time{color:gray;font-size:10px;font-weight:normal;}
+.plan_content p{margin:0;width:80%;font-size:12px;}
+
+.tomato_time{position:relative;display:inline-block;height:16px;}
+.tomato_time p{position:absolute;margin:0;padding:0;white-space:nowrap;z-index:-1;}
+.tomato_time p a{display:inline-block;height:16px;}
+.tomato_time p a.red_tomato{background:url('/themes/pic/red_tomato.png') repeat-x;}
+.tomato_time p a.green_tomato{background:url('/themes/pic/green_tomato.png') repeat-x;}
+.tomato_alert{display:inline-block;width:16px;height:16px;background:url('/themes/pic/blue_alert.png') no-repeat;}
+.tomato_time img{vertical-align: baseline;}
+
+.finish_icon{position:absolute;left:-25px;top:5px;}
+
+#timming{font-size:30px;line-height:70px;}
+
+.blank_holder{height:20px;}
+
+#target_editable{color:red;}
+
+#target_editable form, #desc_editable form, #status form, .step_editable form, .planame form{display:inline;}
+#target_editable form input, #desc_editable form input, #status form input, .step_editable form input, .planame form input{font-size:inherit;font-weight:inherit;}
+
+form{margin:0;}
+select {width:auto;height:auto;padding:0;margin-bottom:0;line-height:normal;}
+input[type=text] {margin-bottom:0;}
+
+.tomato_count_show{display:inline-block;width:45px;height:32px;
+background-image: url('/themes/pic/tomato32.png');
+background-repeat: no-repeat;
+background-position: center center;}
+
+#tomato_board{text-align:center;}
+#tomato_board a {display:inline-block; width:36px; height:32px; background-image:url('/themes/pic/orange32.png'); background-repeat:no-repeat; background-position:center center;}
+#tomato_board a.tomato_active {background-image:url('/themes/pic/tomato32.png');}

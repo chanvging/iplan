@@ -1,0 +1,26 @@
+		
+check_login:
+	item:is_login
+	pin:
+		has_login:get_tongji_data
+		not_login:login
+
+get_tongji_data:
+	item:get_tongji_data
+	pin:
+		got_data:tongji
+		
+tongji:
+	item:tongji
+	pin:
+		succ:display
+		
+display:
+	item:display
+	args:
+		tpl:tongji
+
+login:
+	item:redirect
+	args:
+		url:index.php?cmd=login

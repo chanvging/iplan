@@ -1,0 +1,39 @@
+is_post:
+	item:check_post
+	pin:
+		post:get_data
+		not_post:display_register_form
+		
+display_register_form:
+	item:display
+	args:
+		tpl:register.html
+
+get_data:
+	item:get_the_fields
+	args:
+		-user
+		-passwd
+	pin:
+		got_value:register
+		
+register:
+	item:register
+	pin:
+		user_exist:alert_exist
+		user_add_ok:do_login
+		
+do_login:
+	item:do_login
+	pin:
+		ok:alert_ok
+
+alert_exist:
+	item:echo
+	args:
+		msg:user name has exist
+		
+alert_ok:
+	item:echo
+	args:
+		msg:you have registered successfully

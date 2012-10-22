@@ -1,0 +1,12 @@
+get_step_id:
+	item:get_id
+	pin:
+		id_found:reset_tomato
+		
+reset_tomato:
+	item:tomato_reset
+	pin:
+		succ:echo
+		
+echo:
+	item:echo

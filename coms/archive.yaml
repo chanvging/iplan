@@ -1,0 +1,37 @@
+check_ajax:
+	item:check_ajax
+	pin:
+		ajax:check_write_auth
+		
+check_write_auth:
+	item:check_write_auth
+	pin:
+		yes:archive_plan
+		no:echo_no_priv
+		
+archive_plan:
+	item:archive_plan
+	pin:
+		updated:echo_succ
+		update_error:echo_fail
+		invalid:echo_invalid
+		
+echo_succ:
+	item:echo
+	args:
+		msg:succ
+		
+echo_fail:
+	item:echo
+	args:
+		msg:fail
+		
+echo_invalid:
+	item:echo
+	args:
+		msg:invalid
+		
+echo_no_priv:
+	item:echo
+	args:
+		msg:no_priv

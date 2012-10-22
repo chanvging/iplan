@@ -1,0 +1,315 @@
+#items of modle plan in plan.mod.php
+addplan:
+	model:plan
+	action:add
+editplan:
+	model:plan
+	action:edit
+get_plan_info:
+	model:plan
+	action:get_plan_info
+drop_plan:
+	model:plan
+	action:drop
+update_plan:
+	model:plan
+	action:update
+get_running_plans:
+	model:plan
+	action:get_running_plans
+get_complete_plans:
+	model:plan
+	action:get_complete_plans
+handle_complete_plan:
+	model:plan
+	action:handle_complete_plan
+subplan:
+	model:plan
+	action:subplan
+get_plans:
+	model:plan
+	action:get_plans
+get_sub_plans:
+	model:plan
+	action:get_sub_plans
+get_top_plan:
+	model:plan
+	action:get_top_plan
+filter_archive:
+	model:plan
+	action:filter_archive
+archive_plan:
+	model:plan
+	action:archive_plan
+redo_plan:
+	model:plan
+	action:redo_plan
+export_ppt:
+	model:plan
+	action:export_ppt
+export_html:
+	model:plan
+	action:export_html
+export_doc:
+	model:plan
+	action:export_doc
+tongji:
+	model:plan
+	action:tongji
+add_schedule:
+	model:plan
+	action:add_schedule
+schedule:
+    model:plan
+    action:schedule
+del_schedule:
+	model:plan
+	action:del_schedule
+	
+#items of modle plans in plans.mod.php
+get_plan_data:
+	model:plans
+	action:addplan
+get_editplan:
+	model:plans
+	action:editplan
+get_del_data:
+	model:plans
+	action:dropplan
+is_sub_plan:
+	model:plans
+	action:is_sub_plan
+get_plan_summary:
+	model:plans
+	action:get_plan_summary
+get_export_type:
+	model:plans
+	action:get_export_type
+get_tongji_data:
+	model:plans
+	action:get_tongji
+	
+#items of modle planview in plan.view.php
+show_add_plan:
+	model:planview
+	action:addplan
+show_plan:
+	model:planview
+	action:showplan
+show_editplan_form:
+	model:planview
+	action:editplan
+showplans:
+	model:planview
+	action:showplans
+show_complete_plan:
+	model:planview
+	action:show_complete_plan
+show_complete_plans:
+	model:planview
+	action:show_complete_plans
+show_combinable_plans:
+	model:planview
+	action:show_combinable_plans
+
+#items of control in control.php
+get_id:
+	model:control
+	action:get_id
+check_post:
+	model:control
+	action:check_post
+check_ajax:
+	model:control
+	action:check_ajax
+get_the_fields:
+	model:control
+	action:get_specific_fields
+
+#items of view in view.php
+display:
+	model:view
+	action:display
+redirect:
+	model:view
+	action:redirect
+alert:
+	model:view
+	action:alert
+echo:
+	model:view
+	action:my_echo
+dump_data:
+	model:view
+	action:dump_data
+p3p_header:
+	model:view
+	action:p3p_header
+json:
+	model:view
+	action:echo_json
+
+# items of model stepctl in step.ctl.php
+get_add_step:
+	model:stepctl
+	action:addstep
+get_edit_step:
+	model:stepctl
+	action:editstep
+get_del_step:
+	model:stepctl
+	action:delstep
+test_add:
+	model:stepctl
+	action:test_add
+get_summary:
+	model:stepctl
+	action:get_summary
+get_editable:
+	model:stepctl
+	action:editable_info
+get_tomatos:
+	model:stepctl
+	action:get_tomatos
+get_timer_data:
+	model:stepctl
+	action:get_timer_data
+	
+#items of model step in step.mod.php
+add_step:
+	model:step
+	action:add
+edit_step:
+	model:step
+	action:edit
+del_step:
+	model:step
+	action:del
+get_steps:
+	model:step
+	action:get_steps
+addstep:
+	model:step
+	action:add
+step_summary:
+	model:step
+	action:summary
+combine_step:
+	model:step
+	action:combine
+order_step:
+	model:step
+	action:order
+do_it:
+	model:step
+	action:do_it
+did_it:
+	model:step
+	action:did_it
+todo_list:
+	model:step
+	action:todo_list
+update_do_it:
+	model:step
+	action:update_do_it
+tomato:
+	model:step
+	action:tomato
+tomato_timer:
+	model:step
+	action:tomato_timer
+tomato_reset:
+	model:step
+	action:tomato_reset
+get_subplan:
+	model:step
+	action:get_subplan
+redo_step:
+	model:step
+	action:redo_step
+
+#items of model stepview in step.view.php
+add_step_view:
+	model:stepview
+	action:addstep
+edit_step_view:
+	model:stepview
+	action:editstep
+del_step_view:
+	model:stepview
+	action:delstep
+show_step_form:
+	model:stepview
+	action:show_form
+show_todo_list:
+	model:stepview
+	action:show_todo_list
+	
+#items of model user in user.mod.php
+register:
+	model:user
+	action:register
+login:
+	model:user
+	action:login
+is_login:
+	model:user
+	action:is_login
+do_login:
+	model:user
+	action:do_login
+logout:
+	model:user
+	action:logout
+get_authority:
+	model:user
+	action:get_authority
+check_read_auth:
+	model:user
+	action:check_read_auth
+check_write_auth:
+	model:user
+	action:check_write_auth
+get_user_info_by_name:
+	model:user
+	action:get_user_info_by_name
+create_session:
+	model:user
+	action:create_session
+get_db_session:
+	model:user
+	action:get_db_session
+	
+#items of userctl in user.ctl.php
+get_xn_data:
+	model:userctl
+	action:get_xiaonei_user_data
+check_app_add:
+	model:userctl
+	action:check_xn_app_add
+go_to_login:
+	model:userctl
+	action:go_to_login
+using_demo_user:
+	model:userctl
+	action:using_demo_user
+	
+#items of alert model in alert.mod.php
+add_alert:
+	model:alert
+	action:add
+del_alert:
+	model:alert
+	action:del
+get_alerts:
+	model:alert
+	action:get_alerts
+	
+#items of alertctl in alert.ctl.php
+handle_alert_data:
+	model:alertctl
+	action:handle_alert_data
+	
+get_del_alert:
+	model:alertctl
+	action:get_del_alert

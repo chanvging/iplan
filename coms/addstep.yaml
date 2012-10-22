@@ -1,0 +1,24 @@
+get_step_data:
+	item:get_add_step
+	pin:
+		post:check_write_auth
+		
+check_write_auth:
+	item:check_write_auth
+	pin:
+		yes:addstep
+		no:echo
+		
+echo:
+	item:echo
+	args:
+		msg:you dont have write authority
+		
+addstep:
+	item:add_step
+	pin:
+		add_step_ok:alert_msg
+		
+alert_msg:
+	item:add_step_view
+

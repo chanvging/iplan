@@ -1,0 +1,58 @@
+check_login:
+	item:is_login
+	pin:
+		has_login:alert2
+		not_login:is_post
+				
+is_post:
+	item:check_post
+	pin:
+		post:get_data
+		not_post:show_form
+		
+show_form:
+	item:display
+	args:
+		tpl:register
+
+get_data:
+	item:get_the_fields
+	args:
+		-user
+		-passwd
+	pin:
+		got_value:login
+		
+login:
+	item:login
+	pin:
+		check_ok:do_login
+		no_user:register
+		check_failed:alert_faild
+		lack_field:use_demo_user
+		
+use_demo_user:
+	item:using_demo_user
+	pin:
+		demo_user:login
+		
+do_login:
+	item:do_login
+	pin:
+		ok:alert2
+		
+alert2:
+	item:redirect
+	args:
+		url:index.php
+		
+register:
+	item:register
+	pin:
+		user_exist:alert_exist
+		user_add_ok:do_login
+
+alert_faild:
+	item:echo
+	args:
+		msg:you passwrod is wrong

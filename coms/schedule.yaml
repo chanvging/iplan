@@ -1,0 +1,21 @@
+		
+check_login:
+	item:is_login
+	pin:
+		has_login:schedule
+		not_login:login
+
+schedule:
+	item:schedule
+	pin:
+		succ:display
+		
+display:
+	item:display
+	args:
+		tpl:schedule
+
+login:
+	item:redirect
+	args:
+		url:index.php?cmd=login

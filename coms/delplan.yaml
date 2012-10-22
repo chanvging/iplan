@@ -1,0 +1,26 @@
+
+get_del_plan:
+	item:get_id
+	pin:
+		id_found:check_write_auth
+		
+check_write_auth:
+	item:check_write_auth
+	pin:
+		yes:del_plan
+		no:echo_no_auth
+
+del_plan:
+	item:drop_plan
+	pin:
+		delete_ok:go_index
+
+go_index:
+	item:redirect
+	args:
+		url:index.php
+		
+echo_no_auth:
+	item:echo
+	args:
+		msg:you hava no this authority

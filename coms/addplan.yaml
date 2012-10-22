@@ -1,0 +1,53 @@
+check_login:
+	item:is_login
+	pin:
+		has_login:get_plan_data
+		not_login:echo
+		
+echo:
+	item:echo
+	args:
+		msg:you havn't login
+
+get_plan_data:
+	item:get_plan_data
+	pin:
+		post:is_sub_plan_1
+		not_post:show_add_plan
+		
+is_sub_plan_1:
+	item:is_sub_plan
+	pin:
+		sub_plan:get_sub_plan
+		not_sub_plan:addplan
+
+get_sub_plan:
+	item: get_subplan
+	pin:
+		no_sub:addplan
+		has_sub:goto_running_page
+		
+addplan:
+	item: addplan
+	pin:
+		add_ok:is_sub_plan
+		
+is_sub_plan:
+	item:is_sub_plan
+	pin:
+		sub_plan:sub_the_plan
+		not_sub_plan:goto_running_page
+		
+		
+sub_the_plan:
+	item:subplan
+	pin:
+		ok:goto_running_page
+		
+goto_running_page:
+	item:echo
+	args:
+		msg:succ
+		
+show_add_plan:
+	item: show_add_plan

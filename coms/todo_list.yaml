@@ -1,0 +1,18 @@
+check_login:
+	item:is_login
+	pin:
+		has_login:get_todo_list
+		not_login:login
+				
+get_todo_list:
+	item:todo_list
+	pin:
+		ok:show_it
+		
+show_it:
+	item:json
+	
+login:
+	item:echo
+	args:
+		msg:please login

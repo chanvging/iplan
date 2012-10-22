@@ -1,0 +1,18 @@
+		
+get_fields:
+	item:get_the_fields
+	args:
+		-comb_id
+		-to_id
+	pin:
+		got_value:combine_step
+		
+combine_step:
+	item:combine_step
+	pin:
+		combine_ok:echo1
+		
+echo1:
+	item:echo
+	args:
+		msg:succ

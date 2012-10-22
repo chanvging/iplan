@@ -1,0 +1,36 @@
+check_login:
+	item:is_login
+	pin:
+		has_login:get_plan_id
+		not_login:echo2
+		
+get_plan_id:
+	item: get_id
+	pin:
+		id_found: check_read_auth
+		
+check_read_auth:
+	item:check_read_auth
+	pin:
+		yes:get_plan_info
+		no:echo
+		
+echo:
+	item:echo
+	args:
+		msg:you dont hava authority
+		
+echo2:
+	item:echo
+	args:
+		msg:you need login
+		
+get_plan_info:
+	item: get_plan_info
+	pin:
+		plan_found: show_plan
+		
+show_plan:
+	item:display
+	args:
+		tpl:showplan

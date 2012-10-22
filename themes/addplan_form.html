@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>添加计划</title>
+	<link type="text/css" href="themes/base/jquery.ui.all.css" rel="stylesheet" />
+	<script type="text/javascript" src="jquery-1.4.2.js"></script>
+	<script type="text/javascript" src="jquery.ui.core.js"></script>
+	<script type="text/javascript" src="jquery.ui.widget.js"></script>
+
+	<script type="text/javascript" src="jquery.ui.datepicker.js"></script>
+	
+	{literal}
+	<script type="text/javascript">
+	$(function() {
+		var opts = {
+         dateFormat: "yy-mm-dd"
+        };
+		$("#start").datepicker(opts);
+		$("#end").datepicker(opts);
+	});
+	</script>
+	{/literal}
+</head>
+
+<body>
+	<form method='POST'>
+		<table>
+		<tr><td>计划名</td><td><input type="text" name="name" value="{$name}"/></td></tr>
+		<tr><td>负责人</td><td><input type="text" name="actor" value="{$actor}"/></td></tr>
+		<tr><td>计划描述</td><td><input type="text" name="description" value="{$description}"/></td></tr>
+		<tr><td>预期目标</td><td><input type="text" name="target" value="{$target}"/></td></tr>
+		<tr><td>开始时间</td><td><input type="text" name="start" id="start" value="{$start}"/></td></tr>
+		<tr><td>结束时间</td><td><input type="text" name="deadline" id="end" value="{$deadline}"/></td></tr>
+		</table>
+		<input type="submit" value="ok"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+check_login:
+	item:is_login
+	pin:
+		has_login:get_plans
+		not_login:login
+
+get_plans:
+	item:get_top_plan
+	pin:
+		plans_found:filter_archive
+		no_plan:alert1
+		
+filter_archive:
+	item:filter_archive
+	pin:
+		filtered:json
+		empty:alert1
+
+json:
+	item:json
+	
+login:
+	item:echo
+	args:
+		msg:please login
+		
+alert1:
+	item:echo
+	args:
+		msg:该项为空

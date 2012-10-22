@@ -1,0 +1,18 @@
+get_editable:
+	item: get_editable
+	pin:
+		got_info:check_write_auth
+		
+check_write_auth:
+	item:check_write_auth
+	pin:
+		yes:edit_step
+		no:echo
+		
+echo:
+	item:echo
+	args:
+		msg:you dont have write authority
+		
+edit_step:
+	item: edit_step

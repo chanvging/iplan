@@ -1,0 +1,23 @@
+
+<hr>
+计划名称：{$name}<br/>
+描述：{$description}<br/>
+预期目标：{$target}<br/>
+开始时间：{$start}<br/>
+结束时间：{$deadline}<br/>
+状态：{$status}<br/>
+步骤：
+<ol>
+{foreach from=$steps item=step}
+	<li>
+	{$step.action}
+	</li>
+{/foreach}
+</ol>
+
+<form method="post" action="">
+<input type="hidden" name="id" value="{$id}"/>
+总结：<br/>
+<textarea name="summary" width=200></textarea><br/>
+<input type="submit" value="提交"/>
+</form>

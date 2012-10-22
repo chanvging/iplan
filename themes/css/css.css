@@ -1,0 +1,8 @@
+body{padding-top:60px;}
+a{text-decoration:none;}
+/*p.sm_editable, p.sm_editable textarea, p.memo_editable, p.memo_editable textarea{font-size:12px;color:#333;}*/
+div.plan_content {display:none;}
+div.step_menu { display:none; float:right; margin-top:15px;}
+
+#logo{position:relative;}
+#logo .beta{position:absolute;font-size:9px;top:2px;left:43px;opacity: 0.3;-webkit-text-size-adjust:none;}

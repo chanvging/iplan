@@ -1,0 +1,12 @@
+get_data:
+	item:get_id
+	pin:
+		id_found:get_plans
+		
+get_plans:
+	item:get_sub_plans
+	pin:
+		plans_found:show_it
+		
+show_it:
+	item:show_combinable_plans

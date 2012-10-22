@@ -1,0 +1,25 @@
+get_summary:
+	item:get_summary
+	pin:
+		summary_ok:check_write_auth
+		
+check_write_auth:
+	item:check_write_auth
+	pin:
+		yes:summary
+		no:echo
+		
+echo:
+	item:echo
+	args:
+		msg:no_authority
+		
+summary:
+	item:step_summary
+	pin:
+		ok:echo2
+		
+echo2:
+	item:echo
+	args:
+		msg:succ

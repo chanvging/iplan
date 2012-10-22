@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="jqueryui/js/jquery-1.4.2.min.js"></script>
+
+{literal}
+<script>
+
+$(document).ready(function(){
+	$('.archive').click(function(){
+		var sure = confirm('will you archive this plan?');
+		if(sure){
+			var planid = $(this).attr('planid');
+			var arch = $(this).attr('arch');
+			var archive = arch==1?0:1;
+			$.get('index.php?cmd=archive&ajax&archive='+archive+'&id='+planid, function(data){
+				alert(data);
+				location.reload();
+			});
+		}
+		return false;
+	});
+});
+</script>
+{/literal}
+
+<title>plans</title>
+<head>
+
+<body>
+
+<ul>
+{foreach from=$plans item=plan}
+	<li>
+		<a href="index.php?cmd=showplan&id={$plan.id}">{$plan.name}</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		[<a href="javascript:;" planid="{$plan.id}" arch="{$plan.archive}" class="archive">{if $plan.archive eq 1}取消{/if}存档</a>]
+	</li>
+{/foreach}
+</ul>
+
+</body>
+</html>

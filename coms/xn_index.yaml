@@ -1,0 +1,36 @@
+check_app_add:
+	item:check_app_add
+	pin:
+		yes:login_getdata
+		no:show_auth_dialog
+		
+show_auth_dialog:
+	item:display
+	args:
+		tpl:authorize.html
+		
+			
+login_getdata:
+	item:get_xn_data
+	pin:
+		got_data:get_user_info
+		
+get_user_info:
+	item:get_user_info_by_name
+	pin:
+		got_user:do_login
+		
+do_login:
+	item:do_login
+	pin:
+		ok:tmp
+		
+tmp:
+	item:p3p_header
+	pin:
+		ok:redirect
+		
+redirect:
+	item:redirect
+	args:
+		url:index.php

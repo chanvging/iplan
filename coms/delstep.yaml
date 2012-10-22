@@ -1,0 +1,7 @@
+get_step_id:
+	item: get_id
+	pin:
+		id_found: del_step
+		
+del_step:
+	item: del_step

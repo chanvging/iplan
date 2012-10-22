@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="http://static.connect.renren.com/js/v1.0/FeatureLoader.jsp"></script>
+	<title>authorize needed</title>
+</head>
+<body>
+
+myplan app need your authorizing...
+
+{literal}
+  <script type="text/javascript">
+    XN_RequireFeatures(["Connect"], function()
+    {
+      XN.Main.init("2454447f8b074c65a4f2312faacb4f3a", "xd_receiver.html");
+		//alert(XN.Connect);
+ 		XN.Connect.showAuthorizeAccessDialog(function(){top.location.href='http://apps.renren.com/myplanapp/';}, function(){
+			top.location.href='http://page.renren.com/myplanapp';
+		});
+    });
+ </script>
+{/literal}
+</body>
+</html>

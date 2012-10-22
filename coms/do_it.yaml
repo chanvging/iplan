@@ -1,0 +1,12 @@
+get_step_id:
+	item:get_id
+	pin:
+		id_found:do_it
+		
+do_it:
+	item:do_it
+	pin:
+		modi_ok:echo
+		
+echo:
+	item:echo

@@ -1,0 +1,42 @@
+check_login:
+	item:is_login
+	pin:
+		has_login:get_plan_id
+		not_login:echo2
+		
+get_plan_id:
+	item: get_id
+	pin:
+		id_found: check_read_auth
+		
+check_read_auth:
+	item:check_read_auth
+	pin:
+		yes:export
+		no:echo
+		
+echo:
+	item:echo
+	args:
+		msg:you dont hava authority
+		
+echo2:
+	item:echo
+	args:
+		msg:you need login
+		
+export:
+	item: get_export_type
+	pin:
+		ppt: export_ppt
+		html: export_html
+		doc: export_doc
+		
+export_ppt:
+	item:export_ppt
+
+export_html:
+	item:export_html
+	
+export_doc:
+	item:export_doc

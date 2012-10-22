@@ -1,0 +1,24 @@
+check_login:
+	item:is_login
+	pin:
+		has_login:get_data
+		not_login:echo
+
+get_data:
+	item:handle_alert_data
+	pin:
+		data_ok:add_alert
+		
+add_alert:
+	item:add_alert
+	pin:
+		alert_added:succ
+		
+succ:
+	item:echo
+	args:
+		msg:succ
+echo:
+	item:echo
+	args:
+		msg:you need login

@@ -1,0 +1,18 @@
+		
+get_fields:
+	item:get_the_fields
+	args:
+		-step_id
+		-after_id
+	pin:
+		got_value:order_step
+		
+order_step:
+	item:order_step
+	pin:
+		ok:echo1
+		
+echo1:
+	item:echo
+	args:
+		msg:succ

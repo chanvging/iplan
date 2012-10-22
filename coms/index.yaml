@@ -1,0 +1,16 @@
+		
+check_login:
+	item:is_login
+	pin:
+		has_login:go_home_page
+		not_login:login
+		
+go_home_page:
+	item:display
+	args:
+		tpl:index
+			
+login:
+	item:redirect
+	args:
+		url:index.php?cmd=login

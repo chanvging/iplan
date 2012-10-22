@@ -1,0 +1,20 @@
+check_login:
+	item:is_login
+	pin:
+		has_login:logout
+		not_login:alert
+		
+logout:
+	item:logout
+	pin:
+		ok:goto
+		
+goto:
+	item:redirect
+	args:
+		url:index.php?cmd=login
+
+alert:
+	item:echo
+	args:
+		msg:you have logout

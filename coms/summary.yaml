@@ -1,0 +1,28 @@
+get_plan_summary:
+	item:get_plan_summary
+	pin:
+		got_summ:check_write_auth
+		
+check_write_auth:
+	item:check_write_auth
+	pin:
+		yes:handle_complete_plan
+		no:echo
+		
+echo:
+	item:echo
+	args:
+		msg:no_authority
+	
+handle_complete_plan:
+	item:handle_complete_plan
+	pin:
+		top_plan:echo2
+		sub_plan:echo2
+		no_chg:echo2
+		
+echo2:
+	item:echo
+	args:
+		msg:succ
+		

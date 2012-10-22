@@ -1,0 +1,7 @@
+body{width:950px;margin:0 auto;}
+#header, #content, #footer{overflow:hidden;}
+#header .ads{width:728px;height:90px;border:solid 1px;float:right;}
+#header .logo{border:solid 1px;}
+
+.leftpart{float:left;width:728px;}
+.rightpart{float:right;width:160px;}

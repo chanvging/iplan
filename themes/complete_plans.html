@@ -1,0 +1,5 @@
+<ul>
+{foreach from=$plans item=plan}
+	<li><a href="index.php?cmd=summary&id={$plan.id}">{$plan.name}</a></li>
+{/foreach}
+</ul>

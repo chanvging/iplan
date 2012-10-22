@@ -1,0 +1,21 @@
+get_tomatos:
+	item:get_tomatos
+	pin:
+		got_tomatos:assign_tomato
+		error:error
+		
+assign_tomato:
+	item:tomato
+	pin:
+		red_ok:succ
+		green_ok:succ
+		
+succ:
+	item:echo
+	args:
+		msg:succ
+		
+error:
+	item:echo
+	args:
+		msg:error

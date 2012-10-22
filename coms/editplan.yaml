@@ -1,0 +1,40 @@
+check_login:
+	item:is_login
+	pin:
+		has_login:check_ajax
+		not_login:echo
+		
+check_ajax:
+	item:check_ajax
+	pin:
+		ajax:check_write_auth
+		
+check_write_auth:
+	item:check_write_auth
+	pin:
+		yes:editplan
+		no:echo2
+
+editplan:
+	item:editplan
+	pin:
+		edit_over:echo3
+		editable:echo4
+		
+echo:
+	item:echo
+	args:
+		msg:you havn't login
+		
+echo2:
+	item:echo
+	args:
+		msg:you dont have write authority
+		
+echo3:
+	item:echo
+	args:
+		msg:succ
+		
+echo4:
+	item:echo

@@ -1,0 +1,27 @@
+get_planid:
+	item:get_id
+	pin:
+		no_id:echo
+		id_found:check_write_auth
+	
+check_write_auth:
+	item:check_write_auth
+	pin:
+		yes:redo_plan
+		no:echo
+		
+echo:
+	item:echo
+	args:
+		msg:no_authority
+	
+redo_plan:
+	item:redo_plan
+	pin:
+		succ:echo2
+		
+echo2:
+	item:echo
+	args:
+		msg:succ
+		

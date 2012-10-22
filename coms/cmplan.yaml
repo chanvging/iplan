@@ -1,0 +1,15 @@
+
+check_login:
+	item:is_login
+	pin:
+		has_login:get_plans
+		not_login:login
+		
+get_plans:
+	item:get_complete_plans
+	pin:
+		plans_found:showplans
+
+showplans:
+	item:json
+

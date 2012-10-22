@@ -1,0 +1,28 @@
+get_xn_data:
+	item:get_xn_data
+	pin:
+		got_data:get_data
+		
+get_data:
+	item:get_the_fields
+	args:
+		-user
+		-passwd
+	pin:
+		got_value:register
+		
+register:
+	item:register
+	pin:
+		user_exist:do_login
+		user_add_ok:do_login
+		
+do_login:
+	item:do_login
+	pin:
+		ok:alert_ok
+
+alert_ok:
+	item:redirect
+	args:
+		url:index.html
