@@ -7,15 +7,12 @@ define(MODROOT, APPROOT.'/mod/');
 define(THEMEROOT, APPROOT.'/themes');
 define(COMS, APPROOT.'/coms/');
 
-//var_dump($_REQUEST);die;
 require APPROOT."/mod/spyc.php"; //parse yaml files
 
 require_once APPROOT."/global.func.php";
 
 $cmd = $_GET['cmd'] ? $_GET['cmd'] : 'index';
 
-//require "coms/$cmd.com.php";
-//require "items.php";
 $items = Spyc::YAMLLoad('items.yaml');
 
 $yamlfile = COMS."$cmd.yaml";
@@ -39,7 +36,7 @@ if(count($keys)!=1) die("check your com file: $yamlfile");
 $com = array_pop($keys);
 $args = array();
 
-$status = '';//该变量时必需的，其他模块会使用该变量
+$status = '';//该变量是必需的，其他模块会使用该变量
 
 while(!empty($com)) { //echo $com.'-->';
 	$item_name = $coms[$com]['item'];
@@ -56,5 +53,3 @@ while(!empty($com)) { //echo $com.'-->';
 	}
 	$status = '';
 }
-
-?>
