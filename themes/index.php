@@ -36,19 +36,19 @@
 					<i class="icon-user"></i> <?php echo $_SESSION['user']; ?> <span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu">
+					<li><a href="index.php?cmd=schedule">My Schedule</a></li>
 					<li><a href="index.php?cmd=logout">Logout</a></li>
 				</ul>
 			</div>
 			
+                    <!--
 			<div class="nav-collapse">
 				<ul class="nav">
-                    <!--
 					<li><a href="/">我的计划</a></li>
 					<li><a href="index.php?cmd=tongji">番茄时间统计</a></li>
-                    -->
-                    <li><a href="index.php?cmd=schedule">schedule</a></li>
 				</ul>
 			</div>
+                    -->
 			
 		</div>
 	</div>
